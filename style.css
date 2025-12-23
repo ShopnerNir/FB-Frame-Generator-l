@@ -1,124 +1,174 @@
+/* ===== Body ===== */
 body {
   font-family: Arial, sans-serif;
-  margin:0;
-  padding:0;
-  background:#f9f9f9;
-  color:#222;
-  text-align:center;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #222;
+  text-align: center;
 }
 
+/* ===== Header ===== */
 .header {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-  background:#e3f2fd;
-  flex-wrap:wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #d0ebff, #a5d8ff);
+  flex-wrap: wrap;
 }
 
 .header-left .logo {
-  width:80px;
-  height:80px;
-  border-radius:50%;
-  margin-right:20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 15px;
 }
 
 .header-right h1 {
-  margin:0;
-  font-size:24px;
+  margin: 0;
+  font-size: 1.6rem;
 }
 
 .header-right .subtitle {
-  margin:5px 0 0 0;
-  font-size:16px;
-  color:#555;
+  margin: 4px 0 0 0;
+  font-size: 0.95rem;
+  color: #555;
 }
 
+/* ===== Instruction Box ===== */
 .instruction-box {
-  background:#fff;
-  margin:20px auto;
-  padding:20px;
-  border-radius:10px;
-  max-width:700px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  background: #fff;
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 12px;
+  max-width: 95%;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .instruction-box h2 {
-  margin-top:0;
+  margin-top: 0;
+  font-size: 1.2rem;
 }
 
+/* ===== Editor Section ===== */
 .editor-section {
-  margin:20px auto;
-  max-width:700px;
+  margin: 15px auto;
+  max-width: 95%;
 }
 
 .canvas-wrap {
-  margin:15px auto;
+  margin: 10px auto;
+  width: 100%;
 }
 
 canvas {
-  border:2px solid #222;
-  max-width:100%;
+  border: 2px solid #222;
+  max-width: 100%;
+  height: auto;
   touch-action: none;
+  border-radius: 10px;
 }
 
+/* ===== Controls ===== */
 .controls {
-  margin-top:10px;
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
 }
 
 .controls label {
-  display:block;
-  margin-top:8px;
-  font-size:14px;
+  display: block;
+  font-size: 0.9rem;
 }
 
 input[type=range] {
-  width:90%;
+  width: 90%;
+  max-width: 200px;
 }
 
 button {
-  margin:8px 4px;
-  padding:8px 14px;
-  font-size:14px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #1971c2;
+  color: #fff;
+  transition: 0.2s;
 }
 
+button:hover {
+  background-color: #1864ab;
+}
+
+/* ===== Footer ===== */
 .footer {
-  margin-top:30px;
-  padding:15px;
-  background:#e3f2fd;
+  margin-top: 20px;
+  padding: 12px;
+  background: linear-gradient(135deg, #d0ebff, #a5d8ff);
 }
 
 .footer p {
-  margin:5px 0;
+  margin: 5px 0;
+  font-size: 0.85rem;
 }
 
 .footer-profile {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-top:5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  flex-wrap: wrap;
 }
 
 .profile-pic {
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  margin-right:10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .footer-text {
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  font-size:12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.75rem;
+  text-align: center;
 }
 
 .footer-text a {
-  color:#007bff;
-  text-decoration:none;
-  font-weight:bold;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .footer-text span {
-  color:#555;
+  color: #555;
+}
+
+/* ===== Media Queries ===== */
+@media (max-width: 600px) {
+  .header-left .logo {
+    margin-bottom: 8px;
+  }
+  .header-right h1 {
+    font-size: 1.3rem;
+  }
+  .header-right .subtitle {
+    font-size: 0.85rem;
+  }
+  .controls {
+    flex-direction: column;
+  }
+  .footer-profile {
+    flex-direction: column;
+  }
+  .footer-text span {
+    font-size: 0.7rem;
+  }
 }
