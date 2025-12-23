@@ -158,7 +158,7 @@ resetBtn.onclick = resetImage;
 // ==== DOWNLOAD ====
 downloadBtn.onclick = () => {
   const a = document.createElement("a");
-  a.download = "framed-image.png";
+  a.download = "spsb-image.png";
   a.href = canvas.toDataURL("image/png");
   a.click();
 };
