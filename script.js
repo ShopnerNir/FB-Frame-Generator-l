@@ -131,9 +131,12 @@ reset.onclick = resetImage;
 function resetImage() {
   imgX = canvas.width / 2;
   imgY = canvas.height / 2;
+
+  // 🔥 no auto zoom — keep original scale
   scale = 1;
+
   rotation = 0;
-  zoomSlider.value = 1;
+  zoomSlider.value = scale;
   rotateSlider.value = 0;
   draw();
 }
