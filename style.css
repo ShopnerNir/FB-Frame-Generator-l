@@ -1,11 +1,36 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
+}
+
+.canvas-wrap {
+  max-width: 100%;
+  margin: 15px auto;
 }
 
 canvas {
-  border: 2px solid #333;
+  border: 2px solid #222;
   max-width: 100%;
-  height: auto;
+  touch-action: none;
+}
+
+.controls {
+  margin-top: 10px;
+}
+
+.controls label {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+input[type=range] {
+  width: 90%;
+}
+
+button {
+  margin: 8px 4px;
+  padding: 8px 14px;
+  font-size: 14px;
 }
