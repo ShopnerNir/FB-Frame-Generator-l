@@ -129,15 +129,24 @@ rotateSlider.oninput = () => {
 reset.onclick = resetImage;
 
 function resetImage() {
+  // center image
   imgX = canvas.width / 2;
   imgY = canvas.height / 2;
 
-  // 🔥 no auto zoom — keep original scale
-  scale = 1;
+  // 🔥 uniform scale (no stretch)
+  // 🔥 image fully inside frame
+  // 🔥 original ratio preserved
+  const scaleX = canvas.width / userImage.width;
+  const scaleY = canvas.height / userImage.height;
+
+  // contain logic
+  scale = Math.min(scaleX, scaleY);
 
   rotation = 0;
+
   zoomSlider.value = scale;
   rotateSlider.value = 0;
+
   draw();
 }
 
