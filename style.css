@@ -46,6 +46,7 @@ body {
   box-shadow: 0 6px 15px rgba(0,0,0,0.08);
   font-size: 0.95rem;
   line-height: 1.4;
+  text-align: left;
 }
 
 .instruction-box h2 {
