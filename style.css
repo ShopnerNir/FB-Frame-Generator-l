@@ -124,24 +124,23 @@ button:hover {
 /* ===== Footer ===== */
 .footer {
   margin-top: 25px;
-  padding: 12px 10px;
+  padding: 14px 8px;
   background: linear-gradient(135deg, #d0ebff, #a5d8ff);
 }
 
-/* MAIN ROW – NEVER WRAPS */
-.footer-row {
-  display: flex;
-  justify-content: space-between;
+/* Two equal halves */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 50% + 50% */
   align-items: center;
-  gap: 10px;
 }
 
-/* Each block */
-.footer-item {
+/* Each half */
+.footer-cell {
   display: flex;
   align-items: center;
+  justify-content: center; /* center inside each half */
   gap: 8px;
-  min-width: 0;
 }
 
 /* Image */
@@ -152,39 +151,32 @@ button:hover {
   flex-shrink: 0;
 }
 
-/* Text */
+/* Text wrapper */
 .footer-text {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
-  font-size: 11px;
-  max-width: 120px;
+  text-align: left;
 }
 
-/* Frame by / Developed by */
+/* Bigger label */
 .footer-label {
-  font-size: 10px;
-  color: #333;
+  font-size: 13px;          /* bigger than name */
+  font-weight: 600;
+  color: #1c3d5a;
 }
 
 /* Name */
 .footer-text a {
+  font-size: 12px;
   font-weight: bold;
   color: #0b5ed7;
   text-decoration: none;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
+/* Location */
 .footer-text small {
   font-size: 10px;
   color: #555;
-}
-
-/* ❗ Mobile safety */
-@media (max-width: 360px) {
-  .footer-text {
-    max-width: 95px;
-  }
 }
