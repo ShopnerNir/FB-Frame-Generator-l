@@ -123,59 +123,57 @@ button:hover {
 
 /* ===== Footer ===== */
 .footer {
-  margin-top: 25px;
-  padding: 14px 8px;
   background: linear-gradient(135deg, #d0ebff, #a5d8ff);
+  padding: 12px 8px;
+  margin-top: 20px;
 }
 
-/* Two equal halves */
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 50% + 50% */
-  align-items: center;
+.footer-row {
+  display: flex;
+  width: 100%;
 }
 
-/* Each half */
-.footer-cell {
+/* 🔥 দুই সমান ভাগ */
+.footer-half {
+  width: 50%;
+  display: flex;
+  justify-content: center; /* মাঝখানে */
+}
+
+.footer-item {
   display: flex;
   align-items: center;
-  justify-content: center; /* center inside each half */
   gap: 8px;
 }
 
-/* Image */
 .footer-pic {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  flex-shrink: 0;
 }
 
-/* Text wrapper */
 .footer-text {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
-  text-align: left;
 }
 
-/* Bigger label */
+/* 🔥 বড় label */
 .footer-label {
-  font-size: 13px;          /* bigger than name */
+  font-size: 13px;
   font-weight: 600;
   color: #1c3d5a;
 }
 
-/* Name */
+/* নাম */
 .footer-text a {
   font-size: 12px;
   font-weight: bold;
   color: #0b5ed7;
   text-decoration: none;
-  white-space: nowrap;
 }
 
-/* Location */
+/* লোকেশন */
 .footer-text small {
   font-size: 10px;
   color: #555;
