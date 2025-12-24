@@ -38,6 +38,10 @@ uploadInput.onchange = e => {
 
 userImage.onload = resetImage;
 
+function closeGreeting() {
+  document.getElementById("greetingModal").style.display = "none";
+}
+
 // ==== FRAME SELECTION ====
 frameImage.src = frameSelect.value;
 frameSelect.onchange = () => {
