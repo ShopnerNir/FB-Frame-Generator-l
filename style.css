@@ -106,19 +106,36 @@ input[type=range] {
   max-width: 200px;
 }
 
+/* Common button style */
 button {
   padding: 6px 12px;
   font-size: 0.9rem;
   border-radius: 6px;
   border: none;
   cursor: pointer;
-  background-color: #1971c2;
   color: #fff;
   transition: 0.2s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* subtle shadow */
 }
 
-button:hover {
+/* Download button (blue) */
+#downloadBtn {
+  background-color: #1971c2;
+}
+
+#downloadBtn:hover {
   background-color: #1864ab;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* hover shadow একটু বেশি */
+}
+
+/* Reset button (red) */
+#resetBtn {
+  background-color: #dc3545;
+}
+
+#resetBtn:hover {
+  background-color: #c82333;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* hover shadow একটু বেশি */
 }
 
 /* ===== Footer ===== */
