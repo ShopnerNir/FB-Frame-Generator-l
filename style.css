@@ -1,3 +1,85 @@
+/* Modal background */
+#greetingModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25); /* site visible but dim */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Popup card */
+.greeting-content {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 92%;
+  width: 380px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  animation: popupIn 0.35s ease;
+  overflow: hidden;
+}
+
+/* Image */
+.greeting-content img {
+  width: 100%;
+  display: block;
+  border-top: 1px solid #eee;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #dc3545;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.35);
+  z-index: 10;
+}
+
+/* Close instruction box */
+.popup-hint-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 6px auto 12px;
+  padding: 4px 8px;
+  width: fit-content;
+  max-width: 90%;
+  background: #f9f9f9;
+  border-radius: 6px;
+  font-size: 0.65rem; /* ছোট subtle text */
+  color: #666;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+.hint-icon {
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+/* Animation */
+@keyframes popupIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 /* ===== Body ===== */
 body {
   font-family: Arial, sans-serif;
